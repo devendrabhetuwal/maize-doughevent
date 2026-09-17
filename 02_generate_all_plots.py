@@ -1,29 +1,3 @@
-"""
-02_generate_all_plots.py
-========================
-Nepal Multimodal Drought Prediction Project
-Step 2: Generate all 11 publication-quality figures (PNG + PDF + SVG)
-
-Run AFTER 00_data_extraction_audit.py and 01_model_training.py
-
-Figures generated
------------------
-FIG01 – Study Area & Maize Distribution
-FIG02 – Drought Verification (5 events, 1 figure each)
-FIG03 – Meteorological Evolution (5 events, 1 figure each)
-FIG04 – Sentinel-2 Vegetation Response (3 sub-figures)
-FIG05 – Sentinel-1 SAR Response (2 sub-figures)
-FIG06 – Spatial Drought-Stress Maps (5 events, 1 figure each)
-FIG07 – Yield Analysis
-FIG08 – Multimodal Ablation Study
-FIG09 – Early-Warning Lead-Time Performance
-FIG10 – Feature Importance & Correlation
-FIG11 – Cross-Event Generalisation (LOEO)
-
-Author : Auto-generated for manuscript preparation
-Date   : 2026-09-17
-"""
-
 import os, warnings
 import numpy as np
 import pandas as pd
@@ -79,7 +53,7 @@ def save_fig(fig, outdir, fname, dpi=300):
         fig.savefig(os.path.join(outdir, f'{fname}.{ext}'),
                     dpi=dpi, bbox_inches='tight', facecolor='white')
     plt.close(fig)
-    print(f"  ✅  {fname}")
+    print(f"    {fname}")
 
 # ── Load data ─────────────────────────────────────────────────────────────────
 df      = pd.read_csv(DATA_PROC+'feature_matrix.csv')
@@ -769,5 +743,5 @@ ax.text(0.97,0.05,f'R²={r2_pool:.3f}\nRMSE={rmse_pool:.3f}%\nMAE={mae_pool:.3f}
 fig.suptitle('Fig. 11. Cross-Event Generalisation: Leave-One-Event-Out Evaluation\nRandom Forest | Full multimodal features | Target: yield anomaly (%)',fontsize=11,fontweight='bold',y=0.98)
 save_fig(fig, os.path.join(OUT_FIGS,'FIG11'), 'FIG11_Cross_Event_Generalisation')
 
-print("\n\n✅  02_generate_all_plots.py  COMPLETE")
+print("\n\n  02_generate_all_plots.py  COMPLETE")
 print(f"All figures saved to: {OUT_FIGS}")
