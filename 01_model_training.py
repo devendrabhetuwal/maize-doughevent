@@ -1,24 +1,3 @@
-"""
-01_model_training.py
-====================
-Nepal Multimodal Drought Prediction Project
-Step 1: Train all ML models, run ablation study, early-warning lead-time
-        evaluation, LOEO cross-validation, and save results.
-
-Run AFTER 00_data_extraction_audit.py
-
-Output files
-------------
-models/rf_full_model.pkl               – Trained Random Forest (all features)
-models/loeo_predictions.csv           – LOEO CV predictions per event
-models/ablation_results.csv           – Ablation study (R²/RMSE/MAE per feature group)
-models/lead_time_results.csv          – Early-warning lead-time performance
-models/feature_importance.csv         – RF feature importance + correlations
-
-Author : Auto-generated for manuscript preparation
-Date   : 2026-09-17
-"""
-
 import os, pickle, warnings
 import numpy as np
 import pandas as pd
