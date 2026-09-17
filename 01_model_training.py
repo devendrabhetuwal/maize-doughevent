@@ -218,4 +218,4 @@ df_imp.to_csv(OUT_MOD+'feature_importance.csv', index=False)
 
 print("\nTop 10 features:")
 print(df_imp[['feature','rf_importance','pearson_r']].head(10).to_string(index=False))
-print("\n✅  01_model_training.py  COMPLETE\n")
+print("\n 01_model_training.py  COMPLETE\n")
