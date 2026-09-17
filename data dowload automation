@@ -1,30 +1,3 @@
-"""
-00_data_extraction_audit.py
-===========================
-Nepal Multimodal Drought Prediction Project
-Step 0: Extract all raw data from source files, audit every variable,
-        and save tidy CSVs to data/raw/ and data/processed/
-
-Run this script FIRST before any other script.
-
-Output files
-------------
-data/raw/era5_daily_all.csv          – ERA5 daily climate (all years × districts)
-data/raw/spi_daily_all.csv           – SPI daily (all years × districts)
-data/raw/smap_daily_all.csv          – SMAP daily soil moisture (all years × districts)
-data/raw/sentinel2_snapshots.csv     – Sentinel-2 band-mean per event/district
-data/raw/sentinel1_snapshots.csv     – Sentinel-1 band-mean per event/district
-data/raw/soil_properties_all.csv     – SoilGrids soil properties
-data/raw/phenology_all.csv           – Phenology calendar (SOS/POS/EOS)
-data/raw/maize_yield_mold_nepal.csv  – Maize yield (MoALD Nepal)
-data/raw/maize_area_production.csv   – Maize area & production
-data/processed/feature_matrix.csv   – Full joined feature matrix (1 row per district-event)
-reports/DATA_AUDIT_REPORT.txt        – Complete data audit
-
-Author : Auto-generated for manuscript preparation
-Date   : 2026-09-17
-"""
-
 import os, glob, warnings
 import numpy as np
 import pandas as pd
